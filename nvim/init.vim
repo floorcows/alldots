@@ -1,9 +1,11 @@
-call plug#begin()
-Plug 'norcalli/nvim-colorizer.lua'
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-call plug#end()
-
-set termguicolors
-lua require'colorizer'.setup()
-colorscheme catppuccin
-set laststatus=0
+source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/general/settings.vim
+source $HOME/.config/nvim/keys/mappings.vim
+source $HOME/.config/nvim/plug-config/coc.vim
+source $HOME/.config/nvim/plug-config/which-key.vim
+source $HOME/.config/nvim/plug-config/startify-header.vim
+source $HOME/.config/nvim/plug-config/floaterm.vim
+source $HOME/.config/nvim/plug-config/sneak.vim
+colorscheme cnord
+set conceallevel=0
+set cmdheight=1
