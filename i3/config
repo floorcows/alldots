@@ -156,7 +156,7 @@ for_window [class="league of legends.exe"] fullscreen
 
 #Wallpaper stuff
 # exec_always --no-startup-id feh --bg-scale ~/images/wallpapers/spooky.jpg
-exec_always --no-startup-id feh --bg-scale ~/builds/wallpapers/misc/lonely-fish.png
+exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpapers/lonely-fish.png
 exec_always --no-startup-id xrandr --output HDMI-1 --right-of eDP-1
 exec_always --no-startup-id xrandr --output HDMI-1-1 --right-of eDP-1-1
 
