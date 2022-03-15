@@ -6,6 +6,6 @@ source $HOME/.config/nvim/plug-config/which-key.vim
 source $HOME/.config/nvim/plug-config/startify-header.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/sneak.vim
-colorscheme cnord
+colorscheme catppuccin
 set conceallevel=0
 set cmdheight=1

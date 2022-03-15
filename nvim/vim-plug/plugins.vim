@@ -13,14 +13,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Themes
-    Plug 'gilgigilgil/anderson.vim'
-    Plug 'nightsense/carbonized'
+    Plug 'catppuccin/nvim', {'as': 'catppuccin'}
     " File Explorer
     Plug 'scrooloose/NERDTree'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
-    " Stable version of coc
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Iceberg plugin
     Plug 'cocopon/iceberg.vim'
     " Plug 'nathanaelkane/vim-indent-guides'
@@ -33,9 +30,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'justinmk/vim-sneak'
     " Quick scope: coloring for f command
     Plug 'unblevable/quick-scope'
-    " Vim airline
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
     " Floating terminal
     Plug 'voldikss/vim-floaterm'
     " Comment random stuff
