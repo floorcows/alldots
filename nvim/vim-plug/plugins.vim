@@ -10,6 +10,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Tex plugin
     " Plug 'lervag/vimtex'
+    " Light speed
+    Plug 'ggandor/lightspeed.nvim'
+    " Dot repeat
+    Plug 'tpope/vim-repeat'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Themes
@@ -28,8 +32,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
     " Adds sneak functionality
     Plug 'justinmk/vim-sneak'
-    " Quick scope: coloring for f command
-    Plug 'unblevable/quick-scope'
     " Floating terminal
     Plug 'voldikss/vim-floaterm'
     " Comment random stuff
@@ -49,6 +51,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'preservim/tagbar'
     " CODIVEROO
     Plug 'metakirby5/codi.vim'
+    " Improved syntax highlighting
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     call plug#end()
 
 

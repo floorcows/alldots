@@ -16,9 +16,9 @@ set splitbelow                          " Horizontal splits will automatically b
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
 set conceallevel=0                      " So that I can see `` in markdown files
-set tabstop=2                           " Insert 2 spaces for a tab
-set shiftwidth=2                        " Change the number of space characters inserted for indentation
-set softtabstop=2
+set tabstop=4                           " Insert 4 spaces for a tab
+set shiftwidth=4                        " Change the number of space characters inserted for indentation
+set softtabstop=4
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
@@ -43,14 +43,10 @@ set path+=**
 set wildmenu
 
 
-"let g:indent_guides_enable_on_vim_startup = 0
-"let g:indent_guides_guide_size = 1
-"let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:startify_bookmarks = [ {'r': '~/Documents/async-riscv/'},
                               \ {'n': '~/.config/nvim'},
                               \ {'c': '~/.config'}
                               \]
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
