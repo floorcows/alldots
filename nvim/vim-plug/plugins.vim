@@ -8,8 +8,8 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    " Tex plugin
-    " Plug 'lervag/vimtex'
+    " View markdown in browser
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     " Light speed
     Plug 'ggandor/lightspeed.nvim'
     " Dot repeat
@@ -22,8 +22,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'scrooloose/NERDTree'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
-    " Iceberg plugin
-    Plug 'cocopon/iceberg.vim'
     " Plug 'nathanaelkane/vim-indent-guides'
     Plug 'Yggdroot/indentLine'
     " Whichkey
@@ -36,8 +34,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     " Comment random stuff
     Plug 'preservim/nerdcommenter'
-    "Goyo
-    Plug 'junegunn/goyo.vim'
     "Smooth scrolling
     Plug 'yuttie/comfortable-motion.vim'
     "Icons for NERDTree
@@ -53,6 +49,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'metakirby5/codi.vim'
     " Improved syntax highlighting
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    " Vim surround
+    Plug 'tpope/vim-surround'
     call plug#end()
 
 

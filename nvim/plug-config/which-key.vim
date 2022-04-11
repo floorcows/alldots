@@ -22,12 +22,11 @@ highlight default link WhichKeyDesc      Function
 let g:which_key_map['h'] = [ '<C-W>s'                        , 'split below']
 let g:which_key_map['v'] = [ '<C-W>v'                        , 'split right']
 let g:which_key_map['w'] = [ ':set wrap!'                    , 'toggle line wrap' ]
-let g:which_key_map['g'] = [ ':Goyo 90%x90%' , 'zen mode' ]
 let g:which_key_map['x'] = [ ':bp | sp | bn | bd'            , 'delete buffer' ]
 let g:which_key_map['d'] = [ ':w !diff % -'            , 'View differences since save' ]
 let g:which_key_map['m'] = [ ':w | :make'                    , 'save and make' ]
 let g:which_key_map['i'] = [ ':VerilogFollowInstance'        , 'Verilog: follow' ]
-let g:which_key_map['t'] = [ ':FloatermNew'                  , 'Terminal' ]
+let g:which_key_map['t'] = [ ':FloatermNew'                  , 'Terminal' ] " TODO Make this toggle instead of new and dont close
 let g:which_key_map['f'] = [ ':FloatermNew fzf'              , 'Use fzf to :e' ]
 
 "Conceal level mappings
@@ -67,17 +66,6 @@ let g:which_key_map.l = {
       \  'c' : [':!clang-format % -i | edit %' , 'C++'],
       \  'w' : [':%s/\s\+$//e' , 'Remove whitespace'],
       \}
-
-
-" Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-"xmap <leader>a  <Plug>(coc-codeaction-selected)
-"nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap keys for applying codeAction to the current buffer.
-" nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-" nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
