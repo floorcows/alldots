@@ -51,6 +51,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     " Vim surround
     Plug 'tpope/vim-surround'
+    " Vim snippets
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
     call plug#end()
 
 

@@ -8,7 +8,7 @@ nnoremap <M-l>    :vertical resize +2<CR>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-" Navigating with C
+" Navigating with control
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -21,6 +21,10 @@ nnoremap <down> :bp<CR>
 
 " File tree
 noremap <silent> ^ :NERDTreeToggle<CR>
+
+" Getting to start of line can be done through | _ and 0, so zero
+" should do something useful
+noremap 0 ^
 
 " Auto completion keybinds
 "inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -42,3 +46,13 @@ ca Q q
 " Better homerow navigation
 noremap H ^
 noremap L $
+
+" Escape from the dang terminal
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
+
+" Escape will never beat me
+tnoremap kj <C-\><C-n>
+tnoremap jk <C-\><C-n>
