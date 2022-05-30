@@ -16,3 +16,14 @@ Change gtk font with lxappearance
 ## Nvim:
 
 Install veridian and verible
+
+## Bashrc:
+
+Standard bashrc file:
+```bash
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Source standard bashrc
+source ${HOME}/.config/shell/bash.sh
+```

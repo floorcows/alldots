@@ -15,6 +15,12 @@ set $term kitty
 # Font for window titles. Will also be used by the bar unless a different font
 font pango:monospace 8
 
+# Disable annoying mouse warping
+mouse_warping none
+
+# Source machine specific config
+include localcfg/i3
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -32,7 +38,7 @@ floating_modifier $mod
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec rofi -show drun -run-command "i3-msg exec '{cmd}'"
 
 # change focus
 bindsym $mod+h focus left
@@ -154,12 +160,6 @@ bindsym $mod+r mode "resize"
 # for_window [class="tests"] move position 1121 10 TODO
 for_window [class="league of legends.exe"] fullscreen
 
-#Wallpaper stuff
-# exec_always --no-startup-id feh --bg-scale ~/images/wallpapers/spooky.jpg
-exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpapers/lonely-fish.png
-exec_always --no-startup-id xrandr --output HDMI-1 --right-of eDP-1
-exec_always --no-startup-id xrandr --output HDMI-1-1 --right-of eDP-1-1
-
 #Polybar exec
 exec_always --no-startup-id ~/.config/polybar/forest/launch.sh
 
@@ -192,13 +192,15 @@ bindsym $mod+g gaps top all toggle 60 ;; exec --no-startup-id polybar-msg cmd to
 assign [class="Thunderbird"] $ws1
 assign [class="Signal"] $ws1
 assign [class="Discord"] $ws1
-assign [class="firefox"] $ws6
+assign [class="firefox"] $ws10
+assign [class="Gtkwave"] $ws8
+for_window [class="firefox"] move to workspace $ws10
+assign [class="Evince"] $ws10
+for_window [class="Evince"] move to workspace $ws10
 assign [class="leagueclientux.exe"] $ws9
 for_window [class="leagueclientux.exe"] move to workspace $ws9
 assign [class="Display"] $ws7
-for_window [class="firefox"] move to workspace $ws6
 assign [class="Spotify"] $ws11
-
 #colors
 
 set $bg-color            #F29DB4
@@ -216,8 +218,7 @@ client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-col
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $inactive-bg-color
 
 # Screen capture management
-bindsym Print exec --no-startup-id maim -s ~/images/maim/$(date +%s).png
-bindsym $mod+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+bindsym $mod+Print exec --no-startup-id maim -s | tee ~/images/maim/$(date +%s).png | xclip -selection clipboard -t image/png
 
 #
 # Keybinds
@@ -233,8 +234,8 @@ bindsym $mod+Shift+f            floating toggle
 
 # #---Workspace Bindings---# #
 bindsym $mod+Tab                workspace Tabs ;; exec --no-startup-id rofi -show window -window-command i3-msg workspace prev_on_output
-bindsym $mod+dead_acute         exec --no-startup-id neovide
-bindsym $mod+Return             exec --no-startup-id $term
+bindsym $mod+apostrophe         exec --no-startup-id neovide
+bindsym $mod+Return             exec $term
 bindsym $mod+Shift+slash        kill
 bindsym $mod+backslash          workspace back_and_forth
 bindsym $mod+space              focus mode_toggle

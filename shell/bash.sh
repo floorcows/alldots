@@ -1,5 +1,3 @@
-export HISTFILE=${XDG_STATE_HOME}/bash/history
-export CARGO_HOME="$XDG_DATA_HOME"/cargo
 
 # Prompt
 PS1='[\u@\h \W]\$ '
@@ -34,4 +32,14 @@ PATH=${PATH}:${HOME}/.cargo/bin
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Set default editor as neovim
-EDITOR=nvim
+export EDITOR=nvim
+
+# XDG spec env variables
+export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_CACHE_HOME=${HOME}/.cache
+export XDG_DATA_HOME=${HOME}/.local/share
+export XDG_STATE_HOME=${HOME}/.local/state
+
+# Move folders out of home according to XDG spec
+export HISTFILE=${XDG_STATE_HOME}/bash/history
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
