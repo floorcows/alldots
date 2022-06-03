@@ -19,7 +19,7 @@ font pango:monospace 8
 mouse_warping none
 
 # Source machine specific config
-include localcfg/i3
+include ../localcfg/i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -38,7 +38,7 @@ floating_modifier $mod
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show drun -run-command "i3-msg exec '{cmd}'"
+bindsym $mod+d exec rofi -show drun -monitor -1 -run-command "i3-msg exec '{cmd}'"
 
 # change focus
 bindsym $mod+h focus left
@@ -233,7 +233,7 @@ bindsym $mod+f               fullscreen toggle
 bindsym $mod+Shift+f            floating toggle
 
 # #---Workspace Bindings---# #
-bindsym $mod+Tab                workspace Tabs ;; exec --no-startup-id rofi -show window -window-command i3-msg workspace prev_on_output
+bindsym $mod+Tab                workspace Tabs ;; exec --no-startup-id rofi -monitor -1 -show window -window-command i3-msg workspace prev_on_output
 bindsym $mod+apostrophe         exec --no-startup-id neovide
 bindsym $mod+Return             exec $term
 bindsym $mod+Shift+slash        kill

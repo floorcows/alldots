@@ -12,6 +12,7 @@ go to https://github.com/adi1090x/polybar-themes to install fonts for polybar
 
 Add catppuccin to GTK, firefox, duckduckgo, youtube.
 Change gtk font with lxappearance
+Grub theme https://github.com/catppuccin/grub
 
 ## Nvim:
 
@@ -27,3 +28,9 @@ Standard bashrc file:
 # Source standard bashrc
 source ${HOME}/.config/shell/bash.sh
 ```
+
+## Cursors:
+
+get cursors from here, set with lxappearance
+
+git clone https://github.com/catppuccin/cursors.git
